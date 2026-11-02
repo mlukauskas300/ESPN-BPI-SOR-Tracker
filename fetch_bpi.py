@@ -2,6 +2,7 @@ import json
 import csv
 import urllib.request
 
+# Request base endpoint with limit
 url = "https://site.web.api.espn.com/apis/fitt/v3/sports/basketball/mens-college-basketball/powerindex?limit=400"
 
 headers = {
@@ -20,34 +21,37 @@ try:
     if not entries:
         entries = data.get("powerIndexes", []) or data.get("groups", [{}])[0].get("standings", {}).get("entries", [])
 
-    # Print the available stat names from the first team that has stats for debugging
-    for entry in entries:
-        stats = entry.get("stats", [])
-        if stats:
-            print("Sample team stat keys found:", [s.get("name") for s in stats])
-            break
-
     for entry in entries:
         team_info = entry.get("team", {})
         team_name = team_info.get("displayName") or team_info.get("name") or team_info.get("abbreviation") or ""
         
         stats = entry.get("stats", [])
+        categories = entry.get("categories", [])
+        
+        # Flatten stats if categories exist
+        all_stats = list(stats)
+        for cat in categories:
+            all_stats.extend(cat.get("stats", []))
         
         bpi_rank = ""
         bpi_val = ""
         sor_val = ""
 
-        for s in stats:
+        for s in all_stats:
             name = str(s.get("name", "")).lower()
+            abbr = str(s.get("abbreviation", "")).lower()
             val = s.get("displayValue") if s.get("displayValue") is not None else s.get("value", "")
             
-            if name in ["bpirank", "rank", "bpi_rank"]:
+            # Check for BPI values
+            if name in ["bpirank", "rank", "bpi_rank"] or abbr in ["bpi rk", "bpi rank"]:
                 bpi_rank = val
-            elif name in ["bpi", "bpirating"]:
+            elif name in ["bpi", "bpirating"] or abbr == "bpi":
                 bpi_val = val
-            # Let's catch any stat name containing 'sor' or 'resume'
-            elif "sor" in name or "resume" in name:
-                sor_val = val
+            
+            # Check for SOR values across different naming conventions
+            elif any(k in name for k in ["sor", "resume", "strengthofrecord"]) or any(k in abbr for k in ["sor", "res"]):
+                if val not in ["--", None]:
+                    sor_val = val
 
         if team_name:
             rows.append([bpi_rank, team_name, bpi_val, sor_val])
