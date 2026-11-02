@@ -12,28 +12,22 @@ req = urllib.request.Request(url, headers=headers)
 
 try:
     with urllib.request.urlopen(req) as response:
-        raw_data = response.read().decode("utf-8")
-        data = json.loads(raw_data)
-
-    # Print top-level keys for debugging in GitHub Actions logs
-    print("Top-level JSON keys:", list(data.keys()))
+        data = json.loads(response.read().decode("utf-8"))
 
     rows = [["Rank", "Team", "BPI", "SOR"]]
     
-    # Try multiple potential pathways in ESPN's API
-    entries = []
-    if "groups" in data and data["groups"]:
-        entries = data["groups"][0].get("standings", {}).get("entries", [])
-    if not entries and "powerIndexes" in data:
-        entries = data["powerIndexes"]
-    if not entries and "items" in data:
-        entries = data["items"]
+    # ESPN lists teams directly under the 'teams' key in this endpoint
+    entries = data.get("teams", [])
+    if not entries:
+        # Fallback pathways just in case
+        entries = data.get("powerIndexes", []) or data.get("groups", [{}])[0].get("standings", {}).get("entries", [])
 
-    print(f"Found {len(entries)} raw entries.")
+    print(f"Found {len(entries)} teams to process.")
 
     for entry in entries:
         team_info = entry.get("team", {})
         team_name = team_info.get("displayName") or team_info.get("name") or team_info.get("abbreviation") or ""
+        
         stats = entry.get("stats", [])
         
         bpi_rank = ""
