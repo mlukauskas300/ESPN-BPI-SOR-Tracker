@@ -2,7 +2,6 @@ import json
 import csv
 import urllib.request
 
-# Updated ESPN Power Index endpoint
 url = "https://site.web.api.espn.com/apis/fitt/v3/sports/basketball/mens-college-basketball/powerindex"
 
 headers = {
@@ -13,19 +12,24 @@ req = urllib.request.Request(url, headers=headers)
 
 try:
     with urllib.request.urlopen(req) as response:
-        data = json.loads(response.read().decode("utf-8"))
+        raw_data = response.read().decode("utf-8")
+        data = json.loads(raw_data)
+
+    # Print top-level keys for debugging in GitHub Actions logs
+    print("Top-level JSON keys:", list(data.keys()))
 
     rows = [["Rank", "Team", "BPI", "SOR"]]
-
-    # Traverse nested groups or top-level powerIndexes
-    groups = data.get("groups", [])
+    
+    # Try multiple potential pathways in ESPN's API
     entries = []
-    
-    if groups and isinstance(groups, list):
-        entries = groups[0].get("standings", {}).get("entries", [])
-    
-    if not entries:
-        entries = data.get("powerIndexes", [])
+    if "groups" in data and data["groups"]:
+        entries = data["groups"][0].get("standings", {}).get("entries", [])
+    if not entries and "powerIndexes" in data:
+        entries = data["powerIndexes"]
+    if not entries and "items" in data:
+        entries = data["items"]
+
+    print(f"Found {len(entries)} raw entries.")
 
     for entry in entries:
         team_info = entry.get("team", {})
