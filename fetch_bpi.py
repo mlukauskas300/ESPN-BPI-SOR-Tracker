@@ -2,7 +2,8 @@ import json
 import csv
 import urllib.request
 
-url = "https://site.web.api.espn.com/apis/fitt/v3/sports/basketball/mens-college-basketball/powerindex"
+# Added ?limit=400 to pull all Division I teams instead of cutting off at 50
+url = "https://site.web.api.espn.com/apis/fitt/v3/sports/basketball/mens-college-basketball/powerindex?limit=400"
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
@@ -16,10 +17,8 @@ try:
 
     rows = [["Rank", "Team", "BPI", "SOR"]]
     
-    # ESPN lists teams directly under the 'teams' key in this endpoint
     entries = data.get("teams", [])
     if not entries:
-        # Fallback pathways just in case
         entries = data.get("powerIndexes", []) or data.get("groups", [{}])[0].get("standings", {}).get("entries", [])
 
     print(f"Found {len(entries)} teams to process.")
