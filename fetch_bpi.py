@@ -20,6 +20,13 @@ try:
     if not entries:
         entries = data.get("powerIndexes", []) or data.get("groups", [{}])[0].get("standings", {}).get("entries", [])
 
+    # Print the available stat names from the first team that has stats for debugging
+    for entry in entries:
+        stats = entry.get("stats", [])
+        if stats:
+            print("Sample team stat keys found:", [s.get("name") for s in stats])
+            break
+
     for entry in entries:
         team_info = entry.get("team", {})
         team_name = team_info.get("displayName") or team_info.get("name") or team_info.get("abbreviation") or ""
@@ -32,17 +39,14 @@ try:
 
         for s in stats:
             name = str(s.get("name", "")).lower()
-            abbr = str(s.get("abbreviation", "")).lower()
             val = s.get("displayValue") if s.get("displayValue") is not None else s.get("value", "")
             
-            # Match BPI Rank
-            if name in ["bpirank", "rank", "bpi_rank"] or abbr in ["bpi rk", "bpi rank"]:
+            if name in ["bpirank", "rank", "bpi_rank"]:
                 bpi_rank = val
-            # Match BPI Rating
-            elif name in ["bpi", "bpirating"] or abbr == "bpi":
+            elif name in ["bpi", "bpirating"]:
                 bpi_val = val
-            # Match SOR Rank
-            elif name in ["sor", "sorrank", "sor_rank", "resumerank", "resume_rank"] or abbr in ["sor rk", "sor rank", "sor"]:
+            # Let's catch any stat name containing 'sor' or 'resume'
+            elif "sor" in name or "resume" in name:
                 sor_val = val
 
         if team_name:
