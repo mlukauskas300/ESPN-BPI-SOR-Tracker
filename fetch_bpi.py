@@ -27,38 +27,35 @@ try:
         bpi_val = ""
         sor_val = ""
 
+        # Loop through categories
         for cat in entry.get("categories", []):
             cat_name = str(cat.get("name", "")).lower()
-            cat_display = str(cat.get("displayName", "")).lower()
             
-            # Check ranks or values maps
+            # Inspect ranks, values, and totals dictionaries
             ranks = cat.get("ranks", {})
             values = cat.get("values", {})
+            totals = cat.get("totals", {})
             
-            # If this category relates to overall power index / BPI
-            if "bpi" in cat_name or "powerindex" in cat_name or "overall" in cat_name:
-                if "bpirank" in ranks:
-                    bpi_rank = ranks["bpirank"]
-                elif "rank" in ranks:
-                    bpi_rank = ranks["rank"]
+            # Merge dictionaries to check all stored stat key-value pairs
+            combined_stats = {}
+            if isinstance(ranks, dict): combined_stats.update(ranks)
+            if isinstance(values, dict): combined_stats.update(values)
+            if isinstance(totals, dict): combined_stats.update(totals)
+            
+            for key, val in combined_stats.items():
+                k_lower = str(key).lower()
+                v_str = str(val) if val is not None else ""
                 
-                if "bpi" in values:
-                    bpi_val = values["bpi"]
-                elif "rating" in values:
-                    bpi_val = values["rating"]
-
-            # If this category relates to resume / strength of record
-            if "resume" in cat_name or "sor" in cat_name or "strengthofrecord" in cat_name or "resume" in cat_display:
-                if "strengthofrecord" in ranks:
-                    sor_val = ranks["strengthofrecord"]
-                elif "sor" in ranks:
-                    sor_val = ranks["sor"]
-                elif "rank" in ranks:
-                    sor_val = ranks["rank"]
-                elif "strengthofrecord" in values:
-                    sor_val = values["strengthofrecord"]
-                elif "sor" in values:
-                    sor_val = values["sor"]
+                # Capture BPI Rank
+                if k_lower in ["bpirank", "bpi_rank", "rank"] and "bpi" in cat_name:
+                    bpi_rank = v_str
+                # Capture BPI Rating
+                elif k_lower in ["bpi", "rating", "bpi_rating"] and "bpi" in cat_name:
+                    bpi_val = v_str
+                # Capture SOR Rank
+                elif k_lower in ["sor", "strengthofrecord", "sor_rank"] or ("sor" in cat_name and k_lower == "rank"):
+                    if v_str not in ["--", None, ""]:
+                        sor_val = v_str
 
         rows.append([bpi_rank, team_name, bpi_val, sor_val])
 
@@ -66,7 +63,7 @@ try:
         writer = csv.writer(f)
         writer.writerows(rows)
 
-    print(f"Successfully processed and wrote {len(rows) - 1} teams to bpi_rankings.csv")
+    print(f"Successfully wrote {len(rows) - 1} teams to bpi_rankings.csv")
 
 except Exception as e:
-    print(f"Error fetching ESPN data: {e}")
+    print(f"Error processing ESPN data: {e}")
