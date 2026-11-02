@@ -2,65 +2,79 @@ import json
 import csv
 import urllib.request
 
-# Request base endpoint with limit
-url = "https://site.web.api.espn.com/apis/fitt/v3/sports/basketball/mens-college-basketball/powerindex?limit=400"
+base_url = "https://site.web.api.espn.com/apis/fitt/v3/sports/basketball/mens-college-basketball/powerindex?limit=400"
+resume_url = "https://site.web.api.espn.com/apis/fitt/v3/sports/basketball/mens-college-basketball/powerindex?limit=400&view=resume"
 
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
 }
 
-req = urllib.request.Request(url, headers=headers)
+def fetch_json(url):
+    req = urllib.request.Request(url, headers=headers)
+    try:
+        with urllib.request.urlopen(req) as response:
+            return json.loads(response.read().decode("utf-8"))
+    except Exception as e:
+        print(f"Error fetching {url}: {e}")
+        return {}
 
 try:
-    with urllib.request.urlopen(req) as response:
-        data = json.loads(response.read().decode("utf-8"))
+    data_base = fetch_json(base_url)
+    data_resume = fetch_json(resume_url)
 
-    rows = [["Rank", "Team", "BPI", "SOR"]]
-    
-    entries = data.get("teams", [])
-    if not entries:
-        entries = data.get("powerIndexes", []) or data.get("groups", [{}])[0].get("standings", {}).get("entries", [])
+    teams_dict = {}
 
-    for entry in entries:
-        team_info = entry.get("team", {})
-        team_name = team_info.get("displayName") or team_info.get("name") or team_info.get("abbreviation") or ""
-        
-        stats = entry.get("stats", [])
-        categories = entry.get("categories", [])
-        
-        # Flatten stats if categories exist
-        all_stats = list(stats)
-        for cat in categories:
-            all_stats.extend(cat.get("stats", []))
-        
-        bpi_rank = ""
-        bpi_val = ""
-        sor_val = ""
+    # 1. Process Base API (BPI & BPI Rank)
+    entries_base = data_base.get("teams", [])
+    for entry in entries_base:
+        t_info = entry.get("team", {})
+        t_name = t_info.get("displayName") or t_info.get("name") or t_info.get("abbreviation") or ""
+        if not t_name:
+            continue
 
-        for s in all_stats:
+        if t_name not in teams_dict:
+            teams_dict[t_name] = {"bpi_rank": "", "bpi": "", "sor": ""}
+
+        for s in entry.get("stats", []):
             name = str(s.get("name", "")).lower()
             abbr = str(s.get("abbreviation", "")).lower()
             val = s.get("displayValue") if s.get("displayValue") is not None else s.get("value", "")
-            
-            # Check for BPI values
-            if name in ["bpirank", "rank", "bpi_rank"] or abbr in ["bpi rk", "bpi rank"]:
-                bpi_rank = val
-            elif name in ["bpi", "bpirating"] or abbr == "bpi":
-                bpi_val = val
-            
-            # Check for SOR values across different naming conventions
-            elif any(k in name for k in ["sor", "resume", "strengthofrecord"]) or any(k in abbr for k in ["sor", "res"]):
-                if val not in ["--", None]:
-                    sor_val = val
 
-        if team_name:
-            rows.append([bpi_rank, team_name, bpi_val, sor_val])
+            if name in ["bpirank", "rank", "bpi_rank"] or abbr in ["bpi rk", "bpi rank"]:
+                teams_dict[t_name]["bpi_rank"] = val
+            elif name in ["bpi", "bpirating"] or abbr == "bpi":
+                teams_dict[t_name]["bpi"] = val
+
+    # 2. Process Resume API (SOR Rank)
+    entries_resume = data_resume.get("teams", [])
+    for entry in entries_resume:
+        t_info = entry.get("team", {})
+        t_name = t_info.get("displayName") or t_info.get("name") or t_info.get("abbreviation") or ""
+        if not t_name:
+            continue
+
+        if t_name not in teams_dict:
+            teams_dict[t_name] = {"bpi_rank": "", "bpi": "", "sor": ""}
+
+        for s in entry.get("stats", []):
+            name = str(s.get("name", "")).lower()
+            abbr = str(s.get("abbreviation", "")).lower()
+            val = s.get("displayValue") if s.get("displayValue") is not None else s.get("value", "")
+
+            if any(k in name for k in ["sor", "resume"]) or any(k in abbr for k in ["sor", "res"]):
+                if val not in ["--", None]:
+                    teams_dict[t_name]["sor"] = val
+
+    # Assemble rows
+    rows = [["Rank", "Team", "BPI", "SOR"]]
+    for team_name, vals in teams_dict.items():
+        rows.append([vals["bpi_rank"], team_name, vals["bpi"], vals["sor"]])
 
     with open("bpi_rankings.csv", "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerows(rows)
 
-    print(f"Successfully wrote {len(rows) - 1} teams to bpi_rankings.csv")
+    print(f"Successfully merged and wrote {len(rows) - 1} teams to bpi_rankings.csv")
 
 except Exception as e:
-    print(f"Error fetching ESPN data: {e}")
+    print(f"Error processing data: {e}")
