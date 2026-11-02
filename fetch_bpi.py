@@ -15,9 +15,13 @@ try:
 
     entries = data.get("teams", [])
     if entries:
-        first_team = entries[0]
-        print("FIRST TEAM KEYS:", list(first_team.keys()))
-        print("FIRST TEAM FULL JSON:", json.dumps(first_team, indent=2)[:1500])
+        team_entry = entries[0]
+        categories = team_entry.get("categories", [])
+        print("CATEGORIES COUNT:", len(categories))
+        for idx, cat in enumerate(categories):
+            print(f"Category {idx} keys:", list(cat.keys()))
+            if "stats" in cat:
+                print(f"Category {idx} stats sample:", cat["stats"][:3])
 
     with open("bpi_rankings.csv", "w", encoding="utf-8") as f:
         f.write("Rank,Team,BPI,SOR\n")
