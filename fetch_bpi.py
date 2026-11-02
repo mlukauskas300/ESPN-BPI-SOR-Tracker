@@ -2,7 +2,6 @@ import json
 import csv
 import urllib.request
 
-# Added ?limit=400 to pull all Division I teams instead of cutting off at 50
 url = "https://site.web.api.espn.com/apis/fitt/v3/sports/basketball/mens-college-basketball/powerindex?limit=400"
 
 headers = {
@@ -21,8 +20,6 @@ try:
     if not entries:
         entries = data.get("powerIndexes", []) or data.get("groups", [{}])[0].get("standings", {}).get("entries", [])
 
-    print(f"Found {len(entries)} teams to process.")
-
     for entry in entries:
         team_info = entry.get("team", {})
         team_name = team_info.get("displayName") or team_info.get("name") or team_info.get("abbreviation") or ""
@@ -34,14 +31,18 @@ try:
         sor_val = ""
 
         for s in stats:
-            name = s.get("name", "")
-            val = s.get("value", s.get("displayValue", ""))
+            name = str(s.get("name", "")).lower()
+            abbr = str(s.get("abbreviation", "")).lower()
+            val = s.get("displayValue") if s.get("displayValue") is not None else s.get("value", "")
             
-            if name in ["bpiRank", "rank", "bpi_rank"]:
+            # Match BPI Rank
+            if name in ["bpirank", "rank", "bpi_rank"] or abbr in ["bpi rk", "bpi rank"]:
                 bpi_rank = val
-            elif name in ["bpi", "bpiRating"]:
+            # Match BPI Rating
+            elif name in ["bpi", "bpirating"] or abbr == "bpi":
                 bpi_val = val
-            elif name in ["sor", "sorRank", "sor_rank"]:
+            # Match SOR Rank
+            elif name in ["sor", "sorrank", "sor_rank", "resumerank", "resume_rank"] or abbr in ["sor rk", "sor rank", "sor"]:
                 sor_val = val
 
         if team_name:
