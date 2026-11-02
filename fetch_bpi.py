@@ -1,5 +1,6 @@
 import json
 import csv
+import re
 import urllib.request
 
 url = "https://site.web.api.espn.com/apis/fitt/v3/sports/basketball/mens-college-basketball/powerindex?limit=400"
@@ -9,6 +10,14 @@ headers = {
 }
 
 req = urllib.request.Request(url, headers=headers)
+
+def clean_rank(val):
+    if val is None:
+        return ""
+    # Convert to string and strip ordinal suffixes (st, nd, rd, th)
+    s = str(val).strip()
+    cleaned = re.sub(r'(st|nd|rd|th)$', '', s, flags=re.IGNORECASE)
+    return cleaned if cleaned not in ["-", ""] else ""
 
 try:
     with urllib.request.urlopen(req) as response:
@@ -34,22 +43,22 @@ try:
             
             # Category 0 is 'bpi'
             if cat_name == "bpi":
-                if len(ranks) > 0 and ranks[0] not in ["-", None]:
-                    bpi_rank = ranks[0]
+                if len(ranks) > 0:
+                    bpi_rank = clean_rank(ranks[0])
                 if len(values) > 0 and values[0] is not None:
-                    bpi_val = values[0]
+                    bpi_val = values[0] # This is the BPI rating (e.g. 23.14)
             
             # Category 1 is 'resume' (contains Strength of Record / SOR)
             elif cat_name == "resume":
-                # Usually SOR rank or value is stored in the first few indices of resume
                 for r in ranks:
-                    if r not in ["-", None, ""]:
-                        sor_val = r
+                    cleaned_r = clean_rank(r)
+                    if cleaned_r:
+                        sor_val = cleaned_r
                         break
                 if not sor_val:
                     for v in values:
                         if v not in ["-", None, ""]:
-                            sor_val = v
+                            sor_val = str(v).strip()
                             break
 
         rows.append([bpi_rank, team_name, bpi_val, sor_val])
