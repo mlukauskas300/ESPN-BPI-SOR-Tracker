@@ -18,63 +18,54 @@ def fetch_json(url):
         print(f"Error fetching {url}: {e}")
         return {}
 
-try:
-    data_base = fetch_json(base_url)
-    data_resume = fetch_json(resume_url)
+data_base = fetch_json(base_url)
+data_resume = fetch_json(resume_url)
 
-    teams_dict = {}
+teams_dict = {}
 
-    # 1. Process Base API (BPI & BPI Rank)
-    entries_base = data_base.get("teams", [])
-    for entry in entries_base:
-        t_info = entry.get("team", {})
-        t_name = t_info.get("displayName") or t_info.get("name") or t_info.get("abbreviation") or ""
-        if not t_name:
-            continue
+# 1. Base BPI
+for entry in data_base.get("teams", []):
+    t_name = entry.get("team", {}).get("displayName", "")
+    if not t_name: continue
+    if t_name not in teams_dict:
+        teams_dict[t_name] = {"bpi_rank": "", "bpi": "", "sor": ""}
+    for s in entry.get("stats", []):
+        name = str(s.get("name", "")).lower()
+        val = s.get("displayValue") if s.get("displayValue") is not None else s.get("value", "")
+        if name in ["bpirank", "rank", "bpi_rank"]: teams_dict[t_name]["bpi_rank"] = val
+        elif name in ["bpi", "bpirating"]: teams_dict[t_name]["bpi"] = val
 
-        if t_name not in teams_dict:
-            teams_dict[t_name] = {"bpi_rank": "", "bpi": "", "sor": ""}
+# 2. Resume SOR
+resume_entries = data_resume.get("teams", [])
+print(f"DEBUG: Found {len(resume_entries)} teams in resume endpoint response.")
 
-        for s in entry.get("stats", []):
-            name = str(s.get("name", "")).lower()
-            abbr = str(s.get("abbreviation", "")).lower()
-            val = s.get("displayValue") if s.get("displayValue") is not None else s.get("value", "")
+for entry in resume_entries:
+    t_name = entry.get("team", {}).get("displayName", "")
+    if not t_name: continue
+    if t_name not in teams_dict:
+        teams_dict[t_name] = {"bpi_rank": "", "bpi": "", "sor": ""}
+    
+    stats = entry.get("stats", [])
+    # Print sample stats for Notre Dame or Villanova to debug
+    if "Notre Dame" in t_name or "Villanova" in t_name:
+        print(f"DEBUG {t_name} stats in resume API:", stats)
 
-            if name in ["bpirank", "rank", "bpi_rank"] or abbr in ["bpi rk", "bpi rank"]:
-                teams_dict[t_name]["bpi_rank"] = val
-            elif name in ["bpi", "bpirating"] or abbr == "bpi":
-                teams_dict[t_name]["bpi"] = val
+    for s in stats:
+        name = str(s.get("name", "")).lower()
+        val = s.get("displayValue") if s.get("displayValue") is not None else s.get("value", "")
+        if "sor" in name or "resume" in name:
+            if val not in ["--", None]:
+                teams_dict[t_name]["sor"] = val
 
-    # 2. Process Resume API (SOR Rank)
-    entries_resume = data_resume.get("teams", [])
-    for entry in entries_resume:
-        t_info = entry.get("team", {})
-        t_name = t_info.get("displayName") or t_info.get("name") or t_info.get("abbreviation") or ""
-        if not t_name:
-            continue
+rows = [["Rank", "Team", "BPI", "SOR"]]
+sor_count = 0
+for team_name, vals in teams_dict.items():
+    rows.append([vals["bpi_rank"], team_name, vals["bpi"], vals["sor"]])
+    if vals["sor"]:
+        sor_count += 1
 
-        if t_name not in teams_dict:
-            teams_dict[t_name] = {"bpi_rank": "", "bpi": "", "sor": ""}
+print(f"DEBUG: Total teams with non-empty SOR values: {sor_count}")
 
-        for s in entry.get("stats", []):
-            name = str(s.get("name", "")).lower()
-            abbr = str(s.get("abbreviation", "")).lower()
-            val = s.get("displayValue") if s.get("displayValue") is not None else s.get("value", "")
-
-            if any(k in name for k in ["sor", "resume"]) or any(k in abbr for k in ["sor", "res"]):
-                if val not in ["--", None]:
-                    teams_dict[t_name]["sor"] = val
-
-    # Assemble rows
-    rows = [["Rank", "Team", "BPI", "SOR"]]
-    for team_name, vals in teams_dict.items():
-        rows.append([vals["bpi_rank"], team_name, vals["bpi"], vals["sor"]])
-
-    with open("bpi_rankings.csv", "w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerows(rows)
-
-    print(f"Successfully merged and wrote {len(rows) - 1} teams to bpi_rankings.csv")
-
-except Exception as e:
-    print(f"Error processing data: {e}")
+with open("bpi_rankings.csv", "w", newline="", encoding="utf-8") as f:
+    writer = csv.writer(f)
+    writer.writerows(rows)
