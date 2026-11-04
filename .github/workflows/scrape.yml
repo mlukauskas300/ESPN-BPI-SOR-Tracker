@@ -3,7 +3,7 @@ name: Daily ESPN BPI Update
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 8 * * *' # Runs every day at 8:00 AM UTC
+    - cron: '0 11 * * *' # Runs at 11:00 AM UTC (6:00 AM EST)
 
 jobs:
   run-scraper:
