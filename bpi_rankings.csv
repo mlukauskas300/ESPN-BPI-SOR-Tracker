@@ -1,366 +1,366 @@
 Rank,Team,BPI,SOR
-1,Duke Blue Devils,24.3923,90
-2,Florida Gators,21.9939,3
-3,Illinois Fighting Illini,21.823,46
-4,Texas Longhorns,19.6074,150
-5,Tennessee Volunteers,19.0435,140
-6,UConn Huskies,18.71,7
-7,Iowa State Cyclones,18.6641,173
-8,Michigan State Spartans,18.2684,35
-9,Houston Cougars,18.1828,111
-10,Kansas Jayhawks,17.5765,28
-11,UCLA Bruins,17.3457,2
-12,Gonzaga Bulldogs,17.1513,9
-13,Texas Tech Red Raiders,17.0464,88
-14,Arizona Wildcats,16.8654,148
-15,Miami Hurricanes,16.4227,171
-16,Marquette Golden Eagles,16.069,134
-17,Vanderbilt Commodores,16.0055,18
-18,Nebraska Cornhuskers,15.9718,11
-19,Louisville Cardinals,15.768,67
-20,BYU Cougars,15.6291,6
-21,Arkansas Razorbacks,15.5151,179
-22,Auburn Tigers,15.2691,137
-23,Alabama Crimson Tide,15.1244,31
-24,TCU Horned Frogs,14.5818,89
-25,Iowa Hawkeyes,14.5292,71
-26,Oklahoma State Cowboys,14.3109,80
-27,Cincinnati Bearcats,14.2202,43
-28,Baylor Bears,13.9659,145
-29,Kentucky Wildcats,13.9104,68
-30,West Virginia Mountaineers,13.8592,121
-31,Ole Miss Rebels,13.5305,72
-32,Virginia Cavaliers,13.5041,70
-33,Michigan Wolverines,13.2646,139
-34,Ohio State Buckeyes,13.2632,144
-35,Texas A&M Aggies,13.1757,77
-36,Missouri Tigers,12.8235,189
-37,St. John's Red Storm,12.7732,97
-38,Indiana Hoosiers,12.7171,124
-39,North Carolina Tar Heels,12.4401,49
-40,Creighton Bluejays,12.2623,92
-41,NC State Wolfpack,12.0974,41
-42,Xavier Musketeers,12.0557,79
-43,USC Trojans,11.8049,133
-44,Purdue Boilermakers,11.6943,290
-45,Grand Canyon Lopes,11.631,85
-46,Villanova Wildcats,11.5558,195
-47,VCU Rams,11.5079,162
-48,Oklahoma Sooners,11.4811,225
-49,Saint Louis Billikens,11.2366,8
-50,Wisconsin Badgers,10.8423,52
-51,Clemson Tigers,10.5211,60
-52,Virginia Tech Hokies,10.4189,110
-53,Providence Friars,10.3662,172
-54,Mississippi State Bulldogs,10.2771,103
-55,Oregon Ducks,10.2273,29
-56,Nevada Wolf Pack,10.2146,105
-57,New Mexico Lobos,10.2097,81
-58,Utah State Aggies,10.0781,127
-59,Georgia Bulldogs,9.9146,95
-60,Maryland Terrapins,9.5441,192
-61,Saint Mary's Gaels,9.4802,19
-62,High Point Panthers,9.1858,15
-63,Memphis Tigers,8.6929,1
-64,Arizona State Sun Devils,8.4058,30
-65,Florida State Seminoles,8.1478,82
-66,Syracuse Orange,8.1176,138
-67,LSU Tigers,8.0396,136
-68,Pittsburgh Panthers,7.7468,108
-69,Minnesota Golden Gophers,7.7449,45
-70,Washington Huskies,7.6969,73
-71,Notre Dame Fighting Irish,7.6196,10
-72,San Diego State Aztecs,7.4599,12
-73,Northwestern Wildcats,7.4132,94
-74,Boise State Broncos,7.3853,215
-75,Colorado Buffaloes,7.2675,186
-76,Colorado State Rams,7.061,26
-77,Seton Hall Pirates,6.9952,106
-78,SMU Mustangs,6.9705,116
-79,Stanford Cardinal,6.7586,38
-80,Rutgers Scarlet Knights,6.7136,167
-81,Butler Bulldogs,6.1001,147
-82,Wichita State Shockers,6.0559,98
-83,South Carolina Gamecocks,6.0138,153
-84,North Texas Mean Green,5.9759,23
-85,Penn State Nittany Lions,5.9624,76
-86,UIC Flames,5.8962,104
-87,Georgetown Hoyas,5.8829,14
-88,Santa Clara Broncos,5.8488,33
-89,Boston College Eagles,5.5434,39
-90,Dayton Flyers,5.5384,219
-91,UNLV Rebels,5.3534,58
-92,Oregon State Beavers,5.1938,101
-93,DePaul Blue Demons,5.1256,22
-94,Wake Forest Demon Deacons,5.0371,180
-95,George Mason Patriots,4.9105,129
-96,Utah Utes,4.8578,51
-97,South Florida Bulls,4.7936,185
-98,McNeese Cowboys,4.7738,135
-99,UCF Knights,4.7156,27
-100,George Washington Revolutionaries,4.6261,99
-101,Akron Zips,4.6134,56
-102,Illinois State Redbirds,4.3114,235
-103,Kansas State Wildcats,4.2628,199
-104,Murray State Racers,4.2585,64
-105,Rhode Island Rams,3.8038,50
-106,Davidson Wildcats,3.7333,16
-107,Richmond Spiders,3.4838,152
-108,Drake Bulldogs,3.4736,217
-109,Tulsa Golden Hurricane,3.4471,146
-110,Furman Paladins,3.2726,32
-111,UC San Diego Tritons,3.238,143
-112,Wright State Raiders,3.1068,47
-113,Wyoming Cowboys,3.0729,161
-114,Miami (OH) RedHawks,3.0412,17
-115,Yale Bulldogs,2.9192,168
-116,Seattle U Redhawks,2.915,184
-117,Texas State Bobcats,2.7913,78
-118,Charleston Cougars,2.7649,208
-119,UC Santa Barbara Gauchos,2.6802,107
-120,Montana State Bobcats,2.5882,169
-121,California Golden Bears,2.5271,113
-122,Liberty Flames,2.1796,242
-123,Georgia Tech Yellow Jackets,2.1423,84
-124,UC Irvine Anteaters,2.078,93
-125,Stephen F. Austin Lumberjacks,1.8454,210
-126,Western Kentucky Hilltoppers,1.683,156
-127,Fordham Rams,1.4963,177
-128,Valparaiso Beacons,1.4275,5
-129,Temple Owls,1.3259,164
-130,Pennsylvania Quakers,1.31,290
-131,Kent State Golden Flashes,1.2696,260
-132,Hawai'i Rainbow Warriors,1.241,36
-133,Toledo Rockets,1.1991,170
-134,Loyola Chicago Ramblers,1.1915,142
-135,Charlotte 49ers,1.0846,21
-136,Kennesaw State Owls,1.0246,75
-137,San Francisco Dons,0.8851,65
-138,Florida Atlantic Owls,0.8462,188
-139,UNC Wilmington Seahawks,0.7498,34
-140,Belmont Bruins,0.6765,149
-141,Hofstra Pride,0.6465,258
-142,Utah Valley Wolverines,0.5119,83
-143,East Tennessee State Buccaneers,0.4914,290
-144,Princeton Tigers,0.4237,62
-145,St. Thomas Tommies,0.3825,130
-146,Loyola Marymount Lions,0.2544,280
-147,App State Mountaineers,0.2415,100
-148,Saint Joseph's Hawks,0.2068,91
-149,Ohio Bobcats,0.1834,37
-150,Eastern Washington Eagles,-0.1558,290
-151,UAB Blazers,-0.2214,187
-152,Pepperdine Waves,-0.3463,249
-153,Vermont Catamounts,-0.4566,176
-154,Sam Houston Bearkats,-0.4813,228
-155,Montana Grizzlies,-0.644,234
-156,Harvard Crimson,-0.8194,220
-157,Western Carolina Catamounts,-0.834,119
-158,Colgate Raiders,-0.8384,290
-159,Northern Iowa Panthers,-0.8452,248
-160,St. Bonaventure Bonnies,-0.9208,205
-161,Pacific Tigers,-0.9593,25
-162,Southern Utah Thunderbirds,-0.9847,206
-163,Arkansas State Red Wolves,-0.9979,86
-164,Austin Peay Governors,-1.0119,256
-165,Louisiana Tech Bulldogs,-1.1193,55
-166,Southern Illinois Salukis,-1.2165,270
-167,Lipscomb Bisons,-1.2182,202
-168,Howard Bison,-1.2285,183
-169,James Madison Dukes,-1.2381,290
-170,Samford Bulldogs,-1.2799,243
-171,American University Eagles,-1.3112,290
-172,Massachusetts Minutemen,-1.3292,154
-173,Washington State Cougars,-1.355,290
-174,Cornell Big Red,-1.3565,191
-175,Texas A&M-Corpus Christi Islanders,-1.4653,165
-176,Northern Colorado Bears,-1.4743,236
-177,Marshall Thundering Herd,-1.5736,197
-178,Western Michigan Broncos,-1.6608,268
-179,Towson Tigers,-1.7363,290
-180,Central Arkansas Bears,-1.7794,159
-181,Chattanooga Mocs,-1.7797,290
-182,South Dakota State Jackrabbits,-1.9124,13
-183,Old Dominion Monarchs,-1.9371,54
-184,Indiana State Sycamores,-1.9879,182
-185,San José State Spartans,-2.0124,190
-186,Bradley Braves,-2.0367,276
-187,Duquesne Dukes,-2.1304,118
-188,Bowling Green Falcons,-2.1306,44
-189,Elon Phoenix,-2.1517,20
-190,Iona Gaels,-2.1717,63
-191,Jacksonville State Gamecocks,-2.2831,271
-192,Youngstown State Penguins,-2.3143,48
-193,Cal State Northridge Matadors,-2.3374,290
-194,Columbia Lions,-2.3543,279
-195,Monmouth Hawks,-2.4362,290
-196,Northern Kentucky Norse,-2.4513,66
-197,UNC Greensboro Spartans,-2.4656,267
-198,UMass Lowell River Hawks,-2.6713,59
-199,Troy Trojans,-2.6993,290
-200,Delaware Blue Hens,-2.8388,232
-201,Florida International Panthers,-2.9126,160
-202,UC Riverside Highlanders,-2.9167,102
-203,Denver Pioneers,-2.9658,290
-204,Queens University Royals,-2.9693,24
-205,Green Bay Phoenix,-3.009,229
-206,Middle Tennessee Blue Raiders,-3.0149,224
-207,East Carolina Pirates,-3.1984,203
-208,UTEP Miners,-3.2092,290
-209,Sacramento State Hornets,-3.2161,240
-210,Robert Morris Colonials,-3.2653,290
-211,Oakland Golden Grizzlies,-3.3726,290
-212,Southern Miss Golden Eagles,-3.5039,223
-213,La Salle Explorers,-3.5524,157
-214,Bethune-Cookman Wildcats,-3.5691,290
-215,Cal Poly Mustangs,-3.5881,226
-216,Fairfield Stags,-3.6211,290
-217,Little Rock Trojans,-3.6408,290
-218,Tulane Green Wave,-3.6483,213
-219,Tarleton State Texans,-3.6925,272
-220,New Mexico State Aggies,-3.8075,227
-221,Eastern Michigan Eagles,-3.8142,126
-222,Longwood Lancers,-3.8306,193
-223,Ball State Cardinals,-3.8419,290
-224,Rice Owls,-3.8968,281
-225,Radford Highlanders,-3.9117,290
-226,Drexel Dragons,-3.918,117
-227,Stony Brook Seawolves,-3.9389,238
-228,Utah Tech Trailblazers,-3.9879,233
-229,Kansas City Roos,-3.9993,132
-230,North Dakota State Bison,-4.0552,273
-231,Long Beach State Beach,-4.0914,290
-232,Portland State Vikings,-4.1145,253
-233,SIU Edwardsville Cougars,-4.1697,250
-234,Purdue Fort Wayne Mastodons,-4.2225,266
-235,Georgia State Panthers,-4.2357,287
-236,Tennessee State Tigers,-4.26,254
-237,East Texas A&M Lions,-4.2974,4
-238,Idaho Vandals,-4.3448,239
-239,Lindenwood Lions,-4.3965,214
-240,Winthrop Eagles,-4.4177,290
-241,Boston University Terriers,-4.4666,40
-242,Mercer Bears,-4.5362,265
-243,Dartmouth Big Green,-4.5967,57
-244,Jacksonville Dolphins,-4.6553,222
-245,Cal State Fullerton Titans,-4.6744,155
-246,Presbyterian Blue Hose,-4.6937,290
-247,Quinnipiac Bobcats,-4.7603,166
-248,Buffalo Bulls,-4.7854,290
-249,Nicholls Colonels,-4.8178,259
-250,Lehigh Mountain Hawks,-4.8872,141
-251,Lamar Cardinals,-4.9135,274
-252,Portland Pilots,-5.0395,278
-253,South Alabama Jaguars,-5.0628,196
-254,San Diego Toreros,-5.0657,114
-255,Eastern Kentucky Colonels,-5.1094,207
-256,UC Davis Aggies,-5.1181,285
-257,Milwaukee Panthers,-5.2113,290
-258,Northeastern Huskies,-5.2351,290
-259,Army Black Knights,-5.2541,221
-260,Georgia Southern Eagles,-5.2941,181
-261,UT Arlington Mavericks,-5.3649,96
-262,UT Martin Skyhawks,-5.3769,290
-263,Oral Roberts Golden Eagles,-5.3901,264
-264,SE Louisiana Lions,-5.4443,69
-265,Louisiana Ragin' Cajuns,-5.5311,290
-266,Marist Red Foxes,-5.5637,204
-267,Florida Gulf Coast Eagles,-5.5813,244
-268,Wofford Terriers,-5.7875,290
-269,Tennessee Tech Golden Eagles,-5.8045,231
-270,Campbell Fighting Camels,-5.8461,290
-271,Brown Bears,-5.8524,290
-272,Central Michigan Chippewas,-5.9646,128
-273,Merrimack Warriors,-5.9839,290
-274,Houston Christian Huskies,-6.0392,163
-275,Hampton Pirates,-6.0405,290
-276,Fresno State Bulldogs,-6.0933,252
-277,Sacred Heart Pioneers,-6.099,284
-278,California Baptist Lancers,-6.1319,290
-279,UT Rio Grande Valley Vaqueros,-6.1435,174
-280,UMBC Retrievers,-6.2983,290
-281,UTSA Roadrunners,-6.4197,200
-282,Southeast Missouri State Redhawks,-6.4757,74
-283,Siena Saints,-6.5842,290
-284,William & Mary Tribe,-6.5862,218
-285,Northern Illinois Huskies,-6.6132,198
-286,Long Island University Sharks,-6.7317,290
-287,Southern Indiana Screaming Eagles,-6.7618,288
-288,Abilene Christian Wildcats,-6.8785,175
-289,UNC Asheville Bulldogs,-6.9466,286
-290,New Hampshire Wildcats,-6.9908,42
-291,Coastal Carolina Chanticleers,-7.0152,290
-292,Bellarmine Knights,-7.0826,290
-293,Missouri State Bears,-7.1754,211
-294,Stetson Hatters,-7.21,290
-295,Navy Midshipmen,-7.2117,194
-296,North Dakota Fighting Hawks,-7.2777,123
-297,South Dakota Coyotes,-7.2814,289
-298,Northern Arizona Lumberjacks,-7.3977,290
-299,North Florida Ospreys,-7.4421,87
-300,North Carolina A&T Aggies,-7.4943,290
-301,Charleston Southern Buccaneers,-7.5243,245
-302,Weber State Wildcats,-7.7165,290
-303,Grambling Tigers,-7.7291,109
-304,Mount St. Mary's Mountaineers,-7.7538,178
-305,Maine Black Bears,-7.8782,125
-306,Cal State Bakersfield Roadrunners,-7.9776,216
-307,Southern Jaguars,-8.0838,290
-308,Bryant Bulldogs,-8.1317,201
-309,Saint Peter's Peacocks,-8.2158,290
-310,North Carolina Central Eagles,-8.2363,290
-311,Morehead State Eagles,-8.357,261
-312,Northwestern State Demons,-8.5664,290
-313,Alabama A&M Bulldogs,-8.5756,209
-314,VMI Keydets,-8.7193,283
-315,Omaha Mavericks,-8.9485,241
-316,South Carolina State Bulldogs,-8.9598,112
-317,North Alabama Lions,-8.982,53
-318,Norfolk State Spartans,-9.1329,212
-319,Detroit Mercy Titans,-9.2455,290
-320,Le Moyne Dolphins,-9.3001,290
-321,Evansville Purple Aces,-9.3222,151
-322,Texas Southern Tigers,-9.3441,290
-323,Idaho State Bengals,-9.3906,290
-324,West Florida Argonauts,-9.401,269
-325,UAlbany Great Danes,-9.441,115
-326,Mercyhurst Lakers,-9.4474,247
-327,Jackson State Tigers,-9.4961,61
-328,Morgan State Bears,-9.4993,122
-329,LSU New Orleans Privateers,-9.5162,237
-330,Loyola Maryland Greyhounds,-9.5199,290
-331,Binghamton Bearcats,-9.5238,158
-332,Lafayette Leopards,-9.5278,277
-333,West Georgia Wolves,-9.528,290
-334,Incarnate Word Cardinals,-9.5574,290
-335,Air Force Falcons,-9.8181,251
-336,Central Connecticut Blue Devils,-9.8613,290
-337,Wagner Seahawks,-9.8847,290
-338,New Haven Chargers,-10.0058,290
-339,South Carolina Upstate Spartans,-10.026,290
-340,Chicago State Cougars,-10.0828,120
-341,IU Indianapolis Jaguars,-10.1205,131
-342,Manhattan Jaspers,-10.3084,290
-343,The Citadel Bulldogs,-10.5093,257
-344,Cleveland State Vikings,-10.6115,230
-345,Bucknell Bison,-11.1067,290
-346,Stonehill Skyhawks,-11.1693,255
-347,Alabama State Hornets,-11.296,290
-348,Niagara Purple Eagles,-11.3594,290
-349,Maryland Eastern Shore Hawks,-11.3765,263
-350,UL Monroe Warhawks,-11.4248,282
-351,NJIT Highlanders,-11.7186,290
-352,Prairie View A&M Panthers,-11.763,262
-353,Alcorn State Braves,-11.7881,290
-354,Gardner-Webb Runnin' Bulldogs,-11.8125,290
-355,Holy Cross Crusaders,-11.9776,290
-356,Delaware State Hornets,-12.0216,275
-357,Eastern Illinois Panthers,-12.1277,290
-358,Fairleigh Dickinson Knights,-12.571,246
-359,Rider Broncs,-12.7803,290
-360,Western Illinois Leathernecks,-12.9758,290
-361,Arkansas-Pine Bluff Golden Lions,-13.4945,290
-362,Coppin State Eagles,-14.4338,290
-363,Florida A&M Rattlers,-14.4893,290
-364,Canisius Golden Griffins,-14.8975,290
-365,Mississippi Valley State Delta Devils,-15.849,290
+1,Duke Blue Devils,24.4074,95
+2,Florida Gators,22.0028,3
+3,Illinois Fighting Illini,21.8375,53
+4,Texas Longhorns,19.6226,145
+5,Tennessee Volunteers,19.0012,140
+6,UConn Huskies,18.7143,8
+7,Iowa State Cyclones,18.6728,167
+8,Houston Cougars,18.3811,20
+9,Michigan State Spartans,18.3652,44
+10,Kansas Jayhawks,17.5892,35
+11,UCLA Bruins,17.3534,2
+12,Gonzaga Bulldogs,17.1628,10
+13,Texas Tech Red Raiders,17.0575,94
+14,Arizona Wildcats,16.8744,143
+15,Miami Hurricanes,16.4305,166
+16,Marquette Golden Eagles,16.081,132
+17,Vanderbilt Commodores,16.0134,23
+18,Nebraska Cornhuskers,15.9745,12
+19,Louisville Cardinals,15.7807,73
+20,BYU Cougars,15.6465,7
+21,Auburn Tigers,15.2768,134
+22,Alabama Crimson Tide,15.1411,40
+23,Virginia Cavaliers,14.766,6
+24,TCU Horned Frogs,14.5941,90
+25,Iowa Hawkeyes,14.5486,75
+26,Cincinnati Bearcats,14.3511,46
+27,Oklahoma State Cowboys,14.2796,85
+28,Kentucky Wildcats,14.0111,71
+29,Baylor Bears,13.9669,139
+30,West Virginia Mountaineers,13.8656,119
+31,Arkansas Razorbacks,13.7713,187
+32,St. John's Red Storm,13.7192,59
+33,Ole Miss Rebels,13.5473,76
+35,Michigan Wolverines,13.2716,135
+34,Ohio State Buckeyes,13.2716,138
+36,Texas A&M Aggies,13.195,79
+37,Missouri Tigers,12.8253,184
+38,Indiana Hoosiers,12.7309,122
+39,North Carolina Tar Heels,12.4091,60
+40,Creighton Bluejays,12.2778,98
+41,Xavier Musketeers,12.0671,81
+42,NC State Wolfpack,12.0607,50
+43,USC Trojans,11.911,16
+44,Purdue Boilermakers,11.7036,300
+45,Grand Canyon Lopes,11.6454,87
+46,Villanova Wildcats,11.5636,197
+47,VCU Rams,11.5085,157
+48,Oklahoma Sooners,11.496,232
+49,Saint Louis Billikens,11.1323,9
+50,Wisconsin Badgers,10.858,61
+51,Clemson Tigers,10.531,68
+52,Virginia Tech Hokies,10.4338,109
+53,Mississippi State Bulldogs,10.3183,104
+54,Providence Friars,10.2863,171
+55,Oregon Ducks,10.243,36
+56,Nevada Wolf Pack,10.2346,13
+57,New Mexico Lobos,10.2251,82
+58,Utah State Aggies,10.0884,126
+59,Georgia Bulldogs,9.9198,100
+60,Maryland Terrapins,9.5457,189
+61,Saint Mary's Gaels,9.5185,91
+62,High Point Panthers,9.2012,19
+63,Memphis Tigers,8.7019,1
+64,Arizona State Sun Devils,8.4209,37
+65,Syracuse Orange,8.1807,129
+66,Florida State Seminoles,8.1568,83
+67,Boise State Broncos,8.0854,24
+68,LSU Tigers,8.0518,133
+69,Pittsburgh Panthers,8.0315,18
+70,Washington Huskies,7.7055,77
+71,Minnesota Golden Gophers,7.6401,65
+72,Notre Dame Fighting Irish,7.628,11
+73,San Diego State Aztecs,7.4679,14
+74,Northwestern Wildcats,7.4588,96
+75,Colorado Buffaloes,7.2765,180
+76,Colorado State Rams,7.055,33
+77,SMU Mustangs,7.0517,114
+78,Seton Hall Pirates,7.0114,106
+79,Stanford Cardinal,6.7724,48
+80,Rutgers Scarlet Knights,6.7217,161
+81,Wichita State Shockers,6.0367,151
+82,North Texas Mean Green,5.992,28
+83,Santa Clara Broncos,5.9306,38
+84,UIC Flames,5.9111,105
+85,Georgetown Hoyas,5.8984,17
+86,Penn State Nittany Lions,5.6745,159
+87,Boston College Eagles,5.5498,49
+88,Dayton Flyers,5.5437,228
+89,Butler Bulldogs,5.4771,173
+90,UNLV Rebels,5.3689,66
+91,South Carolina Gamecocks,5.3384,101
+92,Oregon State Beavers,5.213,102
+93,Richmond Spiders,5.1707,34
+94,DePaul Blue Demons,5.1412,27
+95,Wake Forest Demon Deacons,5.037,175
+96,George Mason Patriots,4.9277,125
+97,Utah Utes,4.8725,58
+98,South Florida Bulls,4.7948,179
+99,McNeese Cowboys,4.7736,131
+100,UCF Knights,4.7322,32
+101,George Washington Revolutionaries,4.696,93
+102,Akron Zips,4.6056,64
+103,Illinois State Redbirds,4.3134,244
+104,Kansas State Wildcats,4.2781,203
+105,Murray State Racers,4.2655,70
+106,Rhode Island Rams,3.8173,57
+107,Davidson Wildcats,3.7328,21
+108,Tulsa Golden Hurricane,3.462,142
+109,Furman Paladins,3.2844,41
+110,UC San Diego Tritons,3.2541,137
+111,Wright State Raiders,3.1306,54
+112,Wyoming Cowboys,3.0831,156
+113,Miami (OH) RedHawks,3.0402,22
+114,Yale Bulldogs,2.9192,162
+115,Seattle U Redhawks,2.8849,181
+116,Texas State Bobcats,2.8055,80
+117,Charleston Cougars,2.7803,220
+118,UC Santa Barbara Gauchos,2.6946,108
+119,Drake Bulldogs,2.6351,147
+120,Montana State Bobcats,2.5864,165
+121,California Golden Bears,2.3675,141
+122,Liberty Flames,2.1864,251
+123,Georgia Tech Yellow Jackets,2.1583,86
+124,UC Irvine Anteaters,2.0941,99
+125,Stephen F. Austin Lumberjacks,1.855,222
+126,Fordham Rams,1.4972,172
+127,Valparaiso Beacons,1.4276,5
+128,Western Kentucky Hilltoppers,1.3953,209
+129,Pennsylvania Quakers,1.3022,300
+130,Kent State Golden Flashes,1.2699,272
+131,Loyola Chicago Ramblers,1.2071,136
+132,Toledo Rockets,1.185,164
+133,Charlotte 49ers,1.0851,26
+134,Kennesaw State Owls,1.0401,78
+135,Hawai'i Rainbow Warriors,0.8945,30
+136,Florida Atlantic Owls,0.8465,183
+137,San Francisco Dons,0.8458,74
+138,UNC Wilmington Seahawks,0.7504,45
+139,Belmont Bruins,0.6919,144
+140,Hofstra Pride,0.5559,271
+141,Utah Valley Wolverines,0.5113,84
+142,East Tennessee State Buccaneers,0.4727,300
+143,App State Mountaineers,0.3543,88
+144,Loyola Marymount Lions,0.2942,290
+145,Saint Joseph's Hawks,0.2191,97
+146,Ohio Bobcats,0.184,47
+147,Eastern Washington Eagles,-0.17,300
+148,UAB Blazers,-0.2131,182
+149,Pepperdine Waves,-0.4659,261
+150,Temple Owls,-0.4759,193
+151,Sam Houston Bearkats,-0.4812,236
+152,Princeton Tigers,-0.6143,186
+153,Montana Grizzlies,-0.6424,242
+154,Western Carolina Catamounts,-0.8414,118
+155,Northern Iowa Panthers,-0.845,258
+156,Colgate Raiders,-0.8451,300
+157,St. Bonaventure Bonnies,-0.9243,214
+158,Arkansas State Red Wolves,-0.9977,89
+159,Austin Peay Governors,-1.0114,265
+160,St. Thomas Tommies,-1.014,206
+161,Southern Utah Thunderbirds,-1.017,216
+162,Pacific Tigers,-1.0525,31
+163,Louisiana Tech Bulldogs,-1.1069,63
+164,Western Michigan Broncos,-1.113,196
+165,Lipscomb Bisons,-1.1729,205
+166,Southern Illinois Salukis,-1.2171,282
+167,James Madison Dukes,-1.2297,300
+168,Howard Bison,-1.2451,178
+169,Samford Bulldogs,-1.2793,252
+170,American University Eagles,-1.3159,300
+171,Massachusetts Minutemen,-1.337,148
+172,Washington State Cougars,-1.3538,300
+173,Northern Colorado Bears,-1.4738,245
+174,Texas A&M-Corpus Christi Islanders,-1.4796,160
+175,Vermont Catamounts,-1.523,226
+176,Marshall Thundering Herd,-1.5572,200
+177,Green Bay Phoenix,-1.6271,52
+178,Harvard Crimson,-1.6932,213
+179,Towson Tigers,-1.7448,300
+180,Central Arkansas Bears,-1.778,153
+181,Chattanooga Mocs,-1.8201,300
+182,Cornell Big Red,-1.8557,190
+183,Old Dominion Monarchs,-1.8974,56
+184,South Dakota State Jackrabbits,-1.912,15
+185,Indiana State Sycamores,-1.9878,177
+186,San José State Spartans,-2.0111,185
+187,Bradley Braves,-2.0288,287
+188,Duquesne Dukes,-2.1149,116
+189,Bowling Green Falcons,-2.1391,51
+190,Elon Phoenix,-2.1504,25
+191,Jacksonville State Gamecocks,-2.2844,283
+192,Youngstown State Penguins,-2.3305,55
+193,Columbia Lions,-2.3387,288
+194,Cal State Northridge Matadors,-2.3545,300
+195,Monmouth Hawks,-2.3623,300
+196,Northern Kentucky Norse,-2.4136,69
+197,UNC Greensboro Spartans,-2.4652,280
+198,UTEP Miners,-2.5795,211
+199,Troy Trojans,-2.6992,300
+200,Delaware Blue Hens,-2.8372,239
+201,Fairfield Stags,-2.8755,202
+202,Florida International Panthers,-2.8973,155
+203,UC Riverside Highlanders,-2.9018,103
+204,Queens University Royals,-2.9783,29
+205,Denver Pioneers,-2.98,300
+206,Middle Tennessee Blue Raiders,-3.0167,233
+207,UMass Lowell River Hawks,-3.0655,43
+208,East Carolina Pirates,-3.1816,210
+209,Sacramento State Hornets,-3.2099,249
+210,Robert Morris Colonials,-3.2791,300
+211,Oakland Golden Grizzlies,-3.3929,300
+212,Portland Pilots,-3.4552,273
+213,Southern Miss Golden Eagles,-3.5075,231
+214,La Salle Explorers,-3.5371,152
+215,Iona Gaels,-3.5729,115
+216,Bethune-Cookman Wildcats,-3.5817,300
+217,Cal Poly Mustangs,-3.5882,234
+218,Tulane Green Wave,-3.634,224
+219,Little Rock Trojans,-3.642,300
+220,Tarleton State Texans,-3.692,284
+221,New Mexico State Aggies,-3.8073,235
+222,Quinnipiac Bobcats,-3.8095,39
+223,Drexel Dragons,-3.8105,112
+224,Longwood Lancers,-3.8239,194
+225,Eastern Michigan Eagles,-3.8299,123
+226,Ball State Cardinals,-3.8417,300
+227,Rice Owls,-3.882,291
+228,Stony Brook Seawolves,-3.9363,248
+229,Radford Highlanders,-3.9455,300
+230,Utah Tech Trailblazers,-3.9883,241
+231,Kansas City Roos,-3.9981,128
+232,Long Beach State Beach,-4.107,300
+233,Portland State Vikings,-4.1199,262
+234,SIU Edwardsville Cougars,-4.1586,259
+235,Purdue Fort Wayne Mastodons,-4.222,279
+236,Georgia State Panthers,-4.2293,296
+237,Tennessee State Tigers,-4.2562,263
+238,East Texas A&M Lions,-4.3117,4
+239,Boston University Terriers,-4.352,42
+240,Lindenwood Lions,-4.3952,227
+241,Winthrop Eagles,-4.4122,300
+242,Milwaukee Panthers,-4.4662,267
+243,Mercer Bears,-4.5435,278
+244,Idaho Vandals,-4.6085,237
+245,Brown Bears,-4.614,268
+246,Jacksonville Dolphins,-4.6553,230
+247,North Dakota State Bison,-4.6747,298
+248,Cal State Fullerton Titans,-4.6884,149
+249,Merrimack Warriors,-4.7643,240
+250,Buffalo Bulls,-4.7764,300
+251,Presbyterian Blue Hose,-4.8127,300
+252,Nicholls Colonels,-4.8179,269
+253,William & Mary Tribe,-4.8688,163
+254,Lamar Cardinals,-4.9142,286
+255,UT Arlington Mavericks,-4.9513,170
+256,South Alabama Jaguars,-5.0462,198
+257,San Diego Toreros,-5.0496,113
+258,Eastern Kentucky Colonels,-5.0946,219
+259,UC Davis Aggies,-5.0984,294
+260,Northeastern Huskies,-5.1339,300
+261,Marist Red Foxes,-5.1596,257
+262,Army Black Knights,-5.2546,229
+263,Georgia Southern Eagles,-5.2928,176
+264,Oral Roberts Golden Eagles,-5.3897,277
+265,UT Martin Skyhawks,-5.3912,300
+266,SE Louisiana Lions,-5.4604,72
+267,Sacred Heart Pioneers,-5.4773,212
+268,Tennessee Tech Golden Eagles,-5.5006,107
+269,Siena Saints,-5.5135,199
+270,Louisiana Ragin' Cajuns,-5.5163,300
+271,Florida Gulf Coast Eagles,-5.5812,253
+272,Navy Midshipmen,-5.6291,195
+273,Southeast Missouri State Redhawks,-5.8308,154
+274,Dartmouth Big Green,-5.9092,207
+275,Central Michigan Chippewas,-5.9641,124
+276,Houston Christian Huskies,-6.0312,158
+277,Hampton Pirates,-6.0499,300
+278,Fresno State Bulldogs,-6.0927,260
+279,UT Rio Grande Valley Vaqueros,-6.1268,168
+280,California Baptist Lancers,-6.1316,300
+281,Lehigh Mountain Hawks,-6.2048,215
+282,UMBC Retrievers,-6.2791,300
+283,Wofford Terriers,-6.3389,243
+284,UTSA Roadrunners,-6.42,204
+285,Campbell Fighting Camels,-6.4503,300
+286,Northern Illinois Huskies,-6.6272,201
+287,Long Island University Sharks,-6.7522,300
+288,Southern Indiana Screaming Eagles,-6.7688,297
+289,UNC Asheville Bulldogs,-6.8067,295
+290,Abilene Christian Wildcats,-6.8778,169
+291,Coastal Carolina Chanticleers,-7.0153,300
+292,Bellarmine Knights,-7.1041,300
+293,Missouri State Bears,-7.16,223
+294,Cal State Bakersfield Roadrunners,-7.243,117
+295,South Dakota Coyotes,-7.2569,299
+296,Stetson Hatters,-7.285,300
+297,North Dakota Fighting Hawks,-7.303,121
+298,Southern Jaguars,-7.3251,300
+299,Northern Arizona Lumberjacks,-7.4118,300
+300,North Florida Ospreys,-7.4581,92
+301,North Carolina A&T Aggies,-7.5033,300
+302,Charleston Southern Buccaneers,-7.525,254
+303,New Hampshire Wildcats,-7.6267,188
+304,Weber State Wildcats,-7.715,300
+305,Grambling Tigers,-7.7304,110
+306,Mount St. Mary's Mountaineers,-7.7541,174
+307,Saint Peter's Peacocks,-8.2001,300
+308,North Carolina Central Eagles,-8.252,300
+309,Morehead State Eagles,-8.3899,275
+310,Alabama A&M Bulldogs,-8.5591,221
+311,Northwestern State Demons,-8.5856,300
+312,Central Connecticut Blue Devils,-8.6915,192
+313,Bryant Bulldogs,-8.723,246
+314,VMI Keydets,-8.724,293
+315,Maine Black Bears,-8.9136,217
+316,Omaha Mavericks,-8.9548,250
+317,South Carolina State Bulldogs,-8.9604,111
+318,North Alabama Lions,-8.9811,62
+319,Binghamton Bearcats,-9.1903,150
+320,Detroit Mercy Titans,-9.2536,300
+321,Evansville Purple Aces,-9.3067,146
+322,Le Moyne Dolphins,-9.3153,300
+323,Manhattan Jaspers,-9.3345,225
+324,Texas Southern Tigers,-9.3586,300
+325,West Florida Argonauts,-9.4015,281
+326,Mercyhurst Lakers,-9.4532,255
+327,Idaho State Bengals,-9.4584,300
+328,Morgan State Bears,-9.4962,120
+329,Jackson State Tigers,-9.5107,67
+330,LSU New Orleans Privateers,-9.5159,247
+331,Loyola Maryland Greyhounds,-9.5353,300
+332,West Georgia Wolves,-9.5421,300
+333,Lafayette Leopards,-9.585,289
+334,Air Force Falcons,-9.764,191
+335,Wagner Seahawks,-9.9002,300
+336,New Haven Chargers,-10.0165,300
+337,South Carolina Upstate Spartans,-10.0247,300
+338,IU Indianapolis Jaguars,-10.1057,127
+339,Chicago State Cougars,-10.1168,130
+340,Incarnate Word Cardinals,-10.132,300
+341,The Citadel Bulldogs,-10.5084,266
+342,UAlbany Great Danes,-10.6029,208
+343,Cleveland State Vikings,-10.6342,238
+344,Norfolk State Spartans,-10.6907,270
+345,Bucknell Bison,-11.1032,300
+346,Stonehill Skyhawks,-11.17,264
+347,Alabama State Hornets,-11.3033,300
+348,Niagara Purple Eagles,-11.3587,300
+349,Maryland Eastern Shore Hawks,-11.3843,276
+350,UL Monroe Warhawks,-11.4088,292
+351,Prairie View A&M Panthers,-11.7554,274
+352,Alcorn State Braves,-11.7881,300
+353,Gardner-Webb Runnin' Bulldogs,-11.8276,300
+354,NJIT Highlanders,-11.8409,218
+355,Delaware State Hornets,-11.8856,285
+356,Holy Cross Crusaders,-11.9925,300
+357,Eastern Illinois Panthers,-12.1416,300
+358,Fairleigh Dickinson Knights,-12.628,256
+359,Western Illinois Leathernecks,-12.9834,300
+360,Rider Broncs,-13.1556,300
+361,Arkansas-Pine Bluff Golden Lions,-13.6605,300
+362,Coppin State Eagles,-14.4478,300
+363,Florida A&M Rattlers,-14.4809,300
+364,Canisius Golden Griffins,-14.9225,300
+365,Mississippi Valley State Delta Devils,-15.8568,300
